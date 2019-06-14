@@ -10,17 +10,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/style.css">
 
     <title>Crystal Game</title>
-
-    <style type="text/css">
-        .crystals img {
-            width: 200px;
-            height: 200px;
-            margin-left: 100px;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -68,75 +60,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script type="text/javascript">
-
-        var counter = 0;
-        var targetNumber = Math.floor((Math.random() * 101) + 19);
-        var wins = 0;
-        var losses = 0;
-        var img1 = Math.floor((Math.random() * 12) + 1);
-        var img2 = Math.floor((Math.random() * 12) + 1);
-        var img3 = Math.floor((Math.random() * 12) + 1);
-        var img4 = Math.floor((Math.random() * 12) + 1);
-
-        $("#win").text(wins)
-        $("#loss").text(losses)
-        $("#demo").text(targetNumber)
-        $("#counters").text(counter)
-
-        $("#image1").on("click", function () {
-            counter += img1;
-            $("#counters").text(counter);
-            console.log(img1);
-        });
-
-        $("#image2").on("click", function () {
-            counter += img2;
-            $("#counters").text(counter);
-            console.log(img2);
-        });
-
-        $("#image3").on("click", function () {
-            counter += img3;
-            $("#counters").text(counter);
-            console.log(img3);
-        });
-
-        $("#image4").on("click", function () {
-            counter += img4;
-            $("#counters").text(counter);
-            console.log(img4);
-        });
-
-        $(".crystal-image").on("click", function () {
-
-            if (counter === targetNumber) {
-                wins++;
-                $("#win").text(wins);
-                alert("You win!");
-                resetGame();
-            
-            }else if (counter > targetNumber) {
-                losses++;
-                $("#loss").text(losses);
-                alert("You lose!!");
-                resetGame();
-            }
-            
-
-        });
-
-        function resetGame() {
-            var targetNumber = Math.floor((Math.random() * 101) + 19);
-            $("#demo").text(targetNumber);
-            counter = 0; 
-            $("#counters").text(counter);
-            console.log(targetNumber);  
-            console.log(img1);
-            console.log(counter);    
-    }
-
-    </script>
+    <script src="assets/javascript.js"></script>
 </body>
 
 </html>
