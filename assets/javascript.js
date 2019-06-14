@@ -16,27 +16,31 @@ $("#image1").on("click", function () {
     counter += img1;
     $("#counters").text(counter);
     console.log(img1);
+    enhanceCount()
 });
 
 $("#image2").on("click", function () {
     counter += img2;
     $("#counters").text(counter);
     console.log(img2);
+    enhanceCount()
 });
 
 $("#image3").on("click", function () {
     counter += img3;
     $("#counters").text(counter);
     console.log(img3);
+    enhanceCount()
 });
 
 $("#image4").on("click", function () {
     counter += img4;
     $("#counters").text(counter);
     console.log(img4);
+    enhanceCount()
 });
 
-$(".crystal-image").on("click", function () {
+ function enhanceCount() {
 
     if (counter === targetNumber) {
         wins++;
@@ -52,10 +56,10 @@ $(".crystal-image").on("click", function () {
     }
 
 
-});
+ }
 
 function resetGame() {
-    var targetNumber = Math.floor((Math.random() * 120) + 19);
+    targetNumber = Math.floor((Math.random() * 120) + 19);
     $("#demo").text(targetNumber);
     counter = 0;
     $("#counters").text(counter);
